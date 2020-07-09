@@ -441,5 +441,301 @@ for (let carForOfDrivers of arrayObjCars) {
     console.log(carForOfDrivers)
 }
 
-
+console.log("----------------------------------------")
 // - взять объекты из задания 1 и превратить каждый в json.
+
+
+let meJson = JSON.stringify(myPerson);
+console.log(meJson)
+let wifeJson = JSON.stringify(wife);
+console.log(wifeJson)
+let houseJson = JSON.stringify(house);
+console.log(houseJson)
+let carsJson = JSON.stringify(cars);
+console.log(carsJson)
+let hobbiesJson = JSON.stringify(hobbies);
+console.log(hobbiesJson)
+
+
+// - взять json из задания 11 и превратить их обратно в объекты.
+console.log("----------------------------------------")
+
+let myPersonX = JSON.parse(meJson)
+console.log(myPersonX)
+let wifeX = JSON.parse(wifeJson)
+console.log(wifeX)
+let houseX = JSON.parse(houseJson)
+console.log(houseX)
+let carsX = JSON.parse(carsJson)
+console.log(carsX)
+let hobbiesX = JSON.parse(hobbiesJson)
+console.log(hobbiesX)
+
+// - взять массив из задания 5,в цикле перебрать его объекты превратив их в json .
+console.log("----------------------------------------")
+
+
+for (let i = 0; i < objCars.length; i++) {
+    let objCarsJson = JSON.stringify(objCars[i])
+    console.log(objCarsJson)
+}
+
+// - взять массив из задания 6,в цикле перебрать его объекты превратив их в json .
+console.log("----------------------------------------")
+
+for (let i = 0; i < objCities.length; i++) {
+    let objCitiesJson = JSON.stringify(objCities[i])
+    console.log(objCitiesJson)
+}
+
+// - взять массив из задания 7,в цикле перебрать его объекты превратив их в json и сразу скоприовать в новый массив.
+console.log("----------------------------------------")
+
+
+for (let i = 0; i < arrayObjCars.length; i++) {
+    let arrayObjCarsJson = JSON.stringify(arrayObjCars[i])
+    console.log(arrayObjCarsJson)
+    let newArrayObjCars = JSON.parse(arrayObjCarsJson)
+    console.log(newArrayObjCars)
+}
+
+
+// - Создать массив пользователей. У каждого пользователя обязательно должено быть поле skills которое является массивом. Проитерировать массив пользователей и в каждом пользователе проитерировать его массив skills
+console.log("----------------------------------------")
+
+let users = [{
+        "name": "Viktor",
+        "age": 26,
+        "skills": ["JS", "Node.JS", "Angular"]
+    },
+    {
+        "name": "Denis",
+        "age": 32,
+        "skills": ["HTML", "Bootstrap", "Angular"]
+    },
+    {
+        "name": "Kostya",
+        "age": 22,
+        "skills": ["JS", "React", "Wordpress"]
+    },
+    {
+        "name": "Liza",
+        "age": 28,
+        "skills": ["C++", "Java", "Python"]
+    }
+]
+
+for (let item = 0; item < users.length; item++) {
+    console.log(users[item])
+    for (let skill of users[item].skills) {
+        console.log(skill)
+    }
+}
+
+
+// - Создать массив пользователей. У каждого пользователя обязательно должено быть поле skills которое является массивом. Проитерировать массив пользователей и в каждом пользователе проитерировать его массив skills. Скопировать все skills всех пользователей в отедльный массив
+console.log("----------------------------------------")
+
+let usersSkills = [];
+
+for (let itemUser = 0; itemUser < users.length; itemUser++) {
+    console.log(users[itemUser])
+    for (let skill of users[itemUser].skills) {
+        console.log(skill)
+        usersSkills.push(skill);
+    }
+}
+console.log(usersSkills)
+
+
+// - За допомогою 2х циклів циклів проітеррувати  даний масив і масив кожного об'єкта.
+
+console.log("----------------------------------------")
+
+
+let users2 = [{
+    name: 'vasya',
+    age: 31,
+    status: false,
+    skills: ['java', 'js']
+}, {
+    name: 'petya',
+    age: 30,
+    status: true,
+    skills: ['java', 'js', 'html']
+}, {
+    name: 'kolya',
+    age: 29,
+    status: true,
+    skills: ['mysql', ',mongo']
+}, {
+    name: 'olya',
+    age: 28,
+    status: false,
+    skills: ['java', 'js']
+}, {
+    name: 'max',
+    age: 30,
+    status: true,
+    skills: ['mysql', ',mongo']
+}];
+
+for (let i = 0; i < users2.length; i++) {
+    console.log(users2[i])
+    for (let a in users2[i]) {
+        console.log([a])
+    }
+}
+
+
+// - З масиву users за допомогою циклу витягнути адреси користувачів і записати (скопіювати) їх в інший порожній масив.
+
+console.log("----------------------------------------")
+
+
+let users3 = [{
+        name: 'vasya',
+        age: 31,
+        status: false,
+        address: {
+            city: 'Lviv',
+            country: 'Ukraine',
+            street: 'Shevchenko',
+            houseNumber: 1
+        }
+    },
+    {
+        name: 'petya',
+        age: 30,
+        status: true,
+        address: {
+            city: 'New York',
+            country: 'USA',
+            street: 'East str',
+            houseNumber: 21
+        }
+    },
+    {
+        name: 'kolya',
+        age: 29,
+        status: true,
+        address: {
+            city: 'Budapest',
+            country: 'Hungary',
+            street: 'Kuraku',
+            houseNumber: 78
+        }
+    },
+    {
+        name: 'olya',
+        age: 28,
+        status: false,
+        address: {
+            city: 'Prague',
+            country: 'Czech',
+            street: 'Paster',
+            houseNumber: 56
+        }
+    },
+    {
+        name: 'max',
+        age: 30,
+        status: true,
+        address: {
+            city: 'Istanbul',
+            country: 'Turkey',
+            street: 'Mikar',
+            houseNumber: 39
+        }
+    },
+    {
+        name: 'anya',
+        age: 31,
+        status: false,
+        address: {
+            city: 'Rio',
+            country: 'Brasil',
+            street: 'Ronaldi',
+            houseNumber: 5
+        }
+    },
+    {
+        name: 'oleg',
+        age: 28,
+        status: false,
+        address: {
+            city: 'Montreal',
+            country: 'Canada',
+            street: 'Acusto',
+            houseNumber: 90
+        }
+    },
+    {
+        name: 'andrey',
+        age: 29,
+        status: true,
+        address: {
+            city: 'Quebeck',
+            country: 'Canada',
+            street: 'Binaro',
+            houseNumber: 33
+        }
+    },
+    {
+        name: 'masha',
+        age: 30,
+        status: true,
+        address: {
+            city: 'Moscow',
+            country: 'Russia',
+            street: 'Gogolia',
+            houseNumber: 1
+        }
+    },
+    {
+        name: 'olya',
+        age: 31,
+        status: false,
+        address: {
+            city: 'Portland',
+            country: 'USA',
+            street: 'Forest str',
+            houseNumber: 4
+        }
+    },
+    {
+        name: 'max',
+        age: 31,
+        status: true,
+        address: {
+            city: 'Cairo',
+            country: 'Egypt',
+            street: 'Seashore',
+            houseNumber: 45
+        }
+    }
+];
+
+let usersAdress = [];
+
+for (let itemUserAd = 0; itemUserAd < users3.length; itemUserAd++) {
+    console.log(users3[itemUserAd])
+    for (let userAdr in users3[itemUserAd].address) {
+        console.log(users3[itemUserAd].address[userAdr])
+        usersAdress.push(users3[itemUserAd].address[userAdr])
+
+    }
+}
+console.log(usersAdress)
+
+
+// - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement. Всі данні в одному блоці.
+
+console.log("----------------------------------------")
+
+
+let usersDocs = document.createElement("div");
+for (usersDocs = 0; usersDocs < users3.length; usersDocs++) {
+    console.log(users3[usersDocs])
+
+}
