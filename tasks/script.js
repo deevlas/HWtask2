@@ -160,3 +160,286 @@ console.log("-----------Toyota----------")
 for (let char in toyota) {
     console.log(char)
 }
+
+
+// - При помощи Object.keys вывести все ключи всех объектов из задания 1 и 2
+
+console.log(Object.keys(myPerson))
+
+console.log("---------------------")
+
+console.log(Object.keys(wife))
+
+console.log("---------------------")
+
+console.log(Object.keys(house))
+
+console.log("---------------------")
+
+console.log(Object.keys(cars))
+
+console.log("---------------------")
+
+console.log(Object.keys(hobbies))
+
+console.log("---------------------")
+
+console.log(Object.keys(mercedes))
+
+console.log("---------------------")
+
+console.log(Object.keys(honda))
+
+console.log("---------------------")
+
+console.log(Object.keys(mazda))
+
+console.log("---------------------")
+
+console.log(Object.keys(toyota))
+
+
+// Создать массив из 10 объектов cars и заполнить его машинами с полями модель, год выпуска, мощность, цвет.(Значаения полей могу быть выдуманными)
+
+
+let objCars = [{
+        "model": "mercedes",
+        "year": 2012,
+        "power": 250,
+        "color": "black"
+    },
+    {
+        "model": "BMW",
+        "year": 2003,
+        "power": 50,
+        "color": "red"
+    },
+    {
+        "model": "fiat",
+        "year": 2010,
+        "power": 120,
+        "color": "white"
+    },
+    {
+        "model": "pontiac",
+        "year": 1998,
+        "power": 210,
+        "color": "red"
+    },
+    {
+        "model": "ferrari",
+        "year": 2016,
+        "power": 350,
+        "color": "red"
+    },
+    {
+        "model": "ford",
+        "year": 2016,
+        "power": 170,
+        "color": "brown"
+    },
+    {
+        "model": "Lada",
+        "year": 2004,
+        "power": 110,
+        "color": "silver"
+    },
+    {
+        "model": "toyota",
+        "year": 2014,
+        "power": 200,
+        "color": "black"
+    },
+    {
+        "model": "honda",
+        "year": 2010,
+        "power": 210,
+        "color": "silver"
+    },
+    {
+        "model": "mazda",
+        "year": 2018,
+        "power": 220,
+        "color": "red"
+    },
+]
+console.log(objCars[5])
+
+// - Создать массив объектов cities и заполнить его объектами с полями название, популяция, страна, регион. (Значаения полей могу быть выдуманными)
+
+let objCities = [{
+        "name": "Kharkiv",
+        "population": 1600000,
+        "country": "Ukraine",
+        "region": "Kharkiv"
+    },
+    {
+        "name": "New-York City",
+        "population": 8400000,
+        "country": "USA",
+        "region": "New-york"
+    },
+    {
+        "name": "Mexico",
+        "population": 9100000,
+        "country": "Mexico",
+        "region": "Mexico"
+    },
+    {
+        "name": "Barcelona",
+        "population": 1700000,
+        "country": "Spain",
+        "region": "La Barceloneta"
+    },
+    {
+        "name": "Rome",
+        "population": 2900000,
+        "country": "Italia",
+        "region": "Roma"
+    }
+
+]
+
+
+// - Создать массив объектов cars и заполнить его машинами с полями модель, год выпуска, мощность, цвет, водитель. Водитель является отдельным объектом с полями имя, возраст, пол, стаж.
+
+let arrayObjCars = [{
+        "model": "toyota",
+        "year": 2014,
+        "power": 210,
+        "color": "silver",
+        "driver": {
+            "name": "Kolya",
+            "age": 32,
+            "sex": "male",
+            "experince": 5
+        }
+    },
+    {
+        "model": "mercedes",
+        "year": 2012,
+        "power": 210,
+        "color": "red",
+        "driver": {
+            "name": "Oleksiy",
+            "age": 26,
+            "sex": "male",
+            "experince": 8
+        }
+    },
+    {
+        "model": "jeep",
+        "year": 2016,
+        "power": 310,
+        "color": "black",
+        "driver": {
+            "name": "Olexandr",
+            "age": 35,
+            "sex": "male",
+            "experince": 10
+        }
+    },
+    {
+        "model": "cadillac",
+        "year": 2018,
+        "power": 210,
+        "color": "red",
+        "driver": {
+            "name": "Maxim",
+            "age": 24,
+            "sex": "male",
+            "experince": 3
+        }
+    },
+    {
+        "model": "lexus",
+        "year": 2015,
+        "power": 230,
+        "color": "brown",
+        "driver": {
+            "name": "Mariia",
+            "age": 24,
+            "sex": "female",
+            "experince": 4
+        }
+    }
+]
+
+
+// - проитерировать каждый массив из задания 5,6,7 при помощи while.
+
+console.log("-------Task 5 while------")
+
+let iterCar = 0;
+
+while (iterCar < objCars.length) {
+    console.log(objCars[iterCar]);
+    iterCar++;
+}
+
+console.log("-------Task 6 while------")
+
+let iterCities = 0;
+
+while (iterCities < objCities.length) {
+    console.log(objCities[iterCities]);
+    iterCities++;
+}
+
+console.log("-------Task 7 while------")
+
+let iterCarWithDrivers = 0;
+
+while (iterCarWithDrivers < arrayObjCars.length) {
+    console.log(arrayObjCars[iterCarWithDrivers]);
+    iterCarWithDrivers++;
+}
+
+
+// - проитерировать каждый массив из задания 5,6,7 при помощи for .
+
+
+console.log("-------Task 5 for------")
+
+for (let iterCarFor = 0; iterCarFor < objCars.length; iterCarFor++) {
+    console.log(objCars[iterCarFor])
+}
+
+
+console.log("-------Task 6 for------")
+
+for (let iterCitiesFor = 0; iterCitiesFor < objCities.length; iterCitiesFor++) {
+    console.log(objCities[iterCitiesFor])
+}
+
+
+console.log("-------Task 7 for------")
+
+for (let iterCarWithDriversFor = 0; iterCarWithDriversFor < arrayObjCars.length; iterCarWithDriversFor++) {
+    console.log(arrayObjCars[iterCarWithDriversFor])
+}
+
+// - проитерировать каждый массив из задания 5,6,7 при помощи  for of.
+
+
+console.log("-------Task 5 for of------")
+
+for (let carForOf of objCars) {
+    console.log(carForOf)
+}
+
+console.log("-------Task 5 for of------")
+
+for (let citiesForOf of objCities) {
+    console.log(citiesForOf)
+}
+
+console.log("-------Task 5 for of------")
+
+
+for (let carForOfDrivers of arrayObjCars) {
+    console.log(carForOfDrivers)
+}
+
+
+// - взять объекты из задания 1 и превратить каждый в json.
