@@ -734,8 +734,57 @@ console.log(usersAdress)
 console.log("----------------------------------------")
 
 
-let usersDocs = document.createElement("div");
-for (usersDocs = 0; usersDocs < users3.length; usersDocs++) {
-    console.log(users3[usersDocs])
+// for (const user of users3) {
+//     let userDiv = document.createElement('div')
+//     userDiv.innerText = `${user.name} - ${user.age} - ${user.status} - ${user.adress}`
+//     document.body.appendChild(userDiv)
+// }
 
+
+// - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement, розділивши всі властивості по своїм блокам (div>div*4)
+
+console.log("----------------------------------------")
+
+
+
+// for (const user of users3) {
+//     let userDiv = document.createElement('div')
+//     document.body.appendChild(userDiv)
+//     for (const userDivs in user) {
+//         let usersProf = document.createElement('div')
+//         usersProf.innerText = `${user[userDivs]}`
+//         userDiv.appendChild(usersProf)
+//     }
+// }
+
+
+
+
+// - За допомоги циклу проітерувати  масив users,
+//  записати кожного юзера в сівй блок за допомоги document.createElement
+//  , розділивши всі властивості по своїм блокам 
+//  , блок з адресою зробити окремим блоком,
+//   з блоками для кожної властивості
+
+
+console.log("----------------------------------------")
+
+
+for (const users of users3) {
+    let userBlock = document.createElement('div')
+
+    for (const property in users) {
+        let fieldUser = document.createElement('div')
+
+        if (typeof users[property] === "object") {
+            for (const i in users[property]) {
+                let someProperty = document.createElement('div')
+                fieldUser.appendChild(someProperty)
+
+            }
+        }
+
+        userBlock.appendChild(fieldUser)
+    }
+    document.body.appendChild(userBlock)
 }
