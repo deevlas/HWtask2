@@ -770,21 +770,224 @@ console.log("----------------------------------------")
 console.log("----------------------------------------")
 
 
-for (const users of users3) {
-    let userBlock = document.createElement('div')
+// for (const users of users3) {
+//     let userBlock = document.createElement('div')
 
-    for (const property in users) {
-        let fieldUser = document.createElement('div')
+//     for (const property in users) {
+//         let fieldUser = document.createElement('div')
 
-        if (typeof users[property] === "object") {
-            for (const i in users[property]) {
-                let someProperty = document.createElement('div')
-                fieldUser.appendChild(someProperty)
+//         if (typeof users[property] === "object") {
+//             for (const i in users[property]) {
+//                 let someProperty = document.createElement('div')
+//                 fieldUser.appendChild(someProperty)
 
-            }
-        }
+//             }
+//         }
 
-        userBlock.appendChild(fieldUser)
-    }
-    document.body.appendChild(userBlock)
-}
+//         userBlock.appendChild(fieldUser)
+//     }
+//     document.body.appendChild(userBlock)
+// }
+
+
+// - Дано 2 масиви з рівною кількістю об'єктів.
+// Масиви:
+// З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
+// Записати цей об'єкт в новий масив
+// Частковий приклад реультату:
+// let usersWithCities = [{id: 1, name: 'vasya', age: 31, status: false, address: {user_id: 1, country: 'Ukraine', city: 'Ternopil'}}....]
+
+
+
+
+
+
+
+
+// let citiesWithId = [{
+//     user_id: 3,
+//     country: 'USA',
+//     city: 'Portland'
+// }, {
+//     user_id: 1,
+//     country: 'Ukraine',
+//     city: 'Ternopil'
+// }, {
+//     user_id: 2,
+//     country: 'Poland',
+//     city: 'Krakow'
+// }, {
+//     user_id: 4,
+//     country: 'USA',
+//     city: 'Miami'
+// }, ];
+
+// let usersWithId = [{
+//     id: 1,
+//     name: 'vasya',
+//     age: 31,
+//     status: false
+// }, {
+//     id: 2,
+//     name: 'petya',
+//     age: 30,
+//     status: true
+// }, {
+//     id: 3,
+//     name: 'kolya',
+//     age: 29,
+//     status: true
+// }, {
+//     id: 4,
+//     name: 'olya',
+//     age: 28,
+//     status: false
+// }, ];
+
+
+
+// Перебрать массив юзера циклом
+// в средине цикла перебрать города
+// если id юзера и id города совпало
+// то добавить юзеру адресс кооторый совпал
+
+
+// for (let i = 0; i < usersWithId.length; i++) {
+//     for (let y = 0; y < citiesWithId.length; y++) {
+//         if (usersWithId[i].id === citiesWithId[y].user_id) {
+//             usersWithId[i].address = citiesWithId[y]
+//         }
+//     }
+// }
+// console.log(usersWithId)
+
+
+
+// - створити розмітці блок з id, class та текстом в середені. Зчитати окремо цей текст з селекторів по id , class та тегу
+
+// let div = document.querySelector('#div')
+// console.log(div)
+
+// let classDiv = document.querySelector("div.class")
+// console.log(classDiv)
+
+// let tegDiv = document.querySelector("p")
+// console.log(tegDiv)
+
+
+// - змінити цей текст використовуючи селектори id, class,  tag
+
+
+// let changeDiv = document.querySelector('#div').innerHTML = "hello"
+// console.log(changeDiv)
+
+// let changeClassDiv = document.querySelector("div.class").innerHTML = "my"
+// console.log(changeClassDiv)
+
+// let changeTegDiv = document.querySelector("p").innerHTML = "friend"
+// console.log(changeTegDiv)
+
+// - змінити висоту та ширину блоку використовуючи селектори id, class,  tag
+
+// let divWidthHeight = document.querySelector('#div')
+// divWidthHeight.style.width = "200px"
+// divWidthHeight.style.height = "200px"
+
+// let classWidthHeight = document.querySelector("div.class")
+// classWidthHeight.style.width = "200px"
+// classWidthHeight.style.height = "200px"
+
+// let pWidthHeight = document.querySelector("p")
+// pWidthHeight.style.width = "200px"
+// pWidthHeight.style.height = "200px"
+
+
+// - за допомоги document.createElement та appendChild створити таблицю на 1 рядок з трьома ячейками всередені
+
+
+// let table = document.createElement('table')
+// table.style.border = "2px solid black";
+// table.style.width = "200px"
+// table.style.height = "200px"
+
+
+// for (let i = 0; i < 3; i++) {
+//     let td = document.createElement("td")
+//     td.style.border = "1px solid red"
+//     table.appendChild(td)
+// }
+
+// document.body.appendChild(table)
+
+// - за допомоги document.createElement, appendChild та циклу створити таблицю на 10 рядків з трьома ячейками всередені
+
+
+
+// let tableTen = document.createElement('table')
+// tableTen.style.border = "1px solid black";
+// tableTen.style.width = "200px"
+// tableTen.style.height = "200px"
+
+// for (let i = 0; i < 10; i++) {
+
+//     let row = document.createElement("tr")
+//     row.style.border = "1px solid red"
+//     tableTen.appendChild(row)
+
+//     for (let j = 0; j < 3; j++) {
+//         let col = document.createElement("td")
+//         col.style.border = "2px solid red"
+//         col.style.borderTop = "none"
+//         tableTen.appendChild(col)
+//     }
+// }
+// document.body.appendChild(tableTen)
+
+
+// - за допомоги document.createElement, appendChild та 2х циклів створити таблицю на 10 рядків з 5 ячейками всередені
+
+// let tableTenFive = document.createElement('table')
+// tableTenFive.style.border = "1px solid black";
+// tableTenFive.style.width = "300px"
+// tableTenFive.style.height = "300px"
+
+// for (let i = 0; i < 10; i++) {
+//     let trow = document.createElement("tr")
+//     trow.style.border = "1px solid red"
+//     tableTenFive.appendChild(trow)
+
+//     for (let j = 0; j < 5; j++) {
+//         let tdCol = document.createElement("td")
+//         tdCol.style.border = "2px solid red"
+//         tdCol.style.borderLeft = "none"
+//         tableTenFive.appendChild(tdCol)
+//     }
+// }
+// document.body.appendChild(tableTenFive)
+
+
+// - за допомоги document.createElement, appendChild та 2х циклів створити таблицю на n рядків з m ячейками всередені. n та m отримати з prompt
+
+
+
+// let tablePrompt = document.createElement('table')
+// tablePrompt.style.border = "1px solid black";
+// tablePrompt.style.width = "300px"
+// tablePrompt.style.height = "300px"
+
+// let x = prompt()
+// let y = prompt()
+
+// for (i = 0; i < x; i++) {
+//     let row = document.createElement("tr")
+//     row.style.border = "1px solid red"
+//     tablePrompt.appendChild(row)
+
+//     for (let j = 0; j < y; j++) {
+//         let col = document.createElement("td")
+//         col.style.border = "2px solid green"
+//         col.style.borderLeft = "none"
+//         tablePrompt.appendChild(col)
+//     }
+// }
+// document.body.appendChild(tablePrompt)
